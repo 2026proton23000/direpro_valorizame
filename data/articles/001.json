@@ -1,0 +1,26 @@
+{
+    "fr": {
+        "titre": "Peaux d'orange en biocarburant",
+        "date": "2025-03-15",
+        "categorie": "organique",
+        "image": "images/articles/001.jpg",
+        "resume": "Une entreprise de jus transforme ses déchets en énergie propre.",
+        "contenu": "<p>Une entreprise locale de production de jus d'orange, en partenariat avec la DIREPRO, a développé un procédé innovant pour transformer les peaux d'orange en biocarburant. Ce projet pilote a permis de valoriser 5 tonnes de déchets en 3 mois.</p><p>Les peaux sont d'abord séchées, puis broyées pour en extraire les huiles essentielles. Le résidu est ensuite fermenté pour produire du biogaz, utilisé pour alimenter une partie des machines de l'usine.</p><p>Cette initiative a réduit les déchets de l'entreprise de 30% et a créé deux emplois locaux. La DIREPRO envisage d'étendre ce modèle à d'autres producteurs de la région.</p>"
+    },
+    "es": {
+        "titre": "Cáscaras de naranja en biocombustible",
+        "date": "2025-03-15",
+        "categorie": "organique",
+        "image": "images/articles/001.jpg",
+        "resume": "Una empresa de jugos transforma sus residuos en energía limpia.",
+        "contenu": "<p>Una empresa local de producción de jugo de naranja, en colaboración con DIREPRO, ha desarrollado un proceso innovador para transformar las cáscaras de naranja en biocombustible. Este proyecto piloto ha permitido valorizar 5 toneladas de residuos en 3 meses.</p><p>Las cáscaras se secan primero, luego se muelen para extraer los aceites esenciales. El residuo se fermenta para producir biogás, que se utiliza para alimentar parte de la maquinaria de la fábrica.</p><p>Esta iniciativa ha reducido los residuos de la empresa en un 30% y ha creado dos empleos locales. DIREPRO planea extender este modelo a otros productores de la región.</p>"
+    },
+    "en": {
+        "titre": "Orange peels into biofuel",
+        "date": "2025-03-15",
+        "categorie": "organique",
+        "image": "images/articles/001.jpg",
+        "resume": "A juice company transforms its waste into clean energy.",
+        "contenu": "<p>A local orange juice company, in partnership with DIREPRO, has developed an innovative process to transform orange peels into biofuel. This pilot project has valorized 5 tons of waste in 3 months.</p><p>The peels are first dried, then ground to extract essential oils. The residue is fermented to produce biogas, used to power part of the factory's machinery.</p><p>This initiative has reduced the company's waste by 30% and created two local jobs. DIREPRO plans to extend this model to other producers in the region.</p>"
+    }
+}

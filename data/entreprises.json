@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "lat": -18.0146,
+        "lng": -70.2523,
+        "image": "images/entreprises/agroolivo.jpg",
+        "fr": {
+            "nom": "AgroOlivo",
+            "description": "Valorisation des déchets d'olive",
+            "type": "organique"
+        },
+        "es": {
+            "nom": "AgroOlivo",
+            "description": "Valorización de residuos de oliva",
+            "type": "orgánico"
+        },
+        "en": {
+            "nom": "AgroOlivo",
+            "description": "Olive waste valorization",
+            "type": "organic"
+        }
+    },
+    {
+        "id": 2,
+        "lat": -18.0258,
+        "lng": -70.2489,
+        "image": "images/entreprises/textiles.jpg",
+        "fr": {
+            "nom": "Textiles Tacna",
+            "description": "Recyclage de chutes de tissus",
+            "type": "inorganique"
+        },
+        "es": {
+            "nom": "Textiles Tacna",
+            "description": "Reciclaje de retales de tela",
+            "type": "inorgánico"
+        },
+        "en": {
+            "nom": "Textiles Tacna",
+            "description": "Fabric scraps recycling",
+            "type": "inorganic"
+        }
+    }
+]

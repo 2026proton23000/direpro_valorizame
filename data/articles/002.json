@@ -1,0 +1,26 @@
+{
+    "fr": {
+        "titre": "Chutes de tissus en isolants",
+        "date": "2025-04-02",
+        "categorie": "inorganique",
+        "image": "images/articles/002.jpg",
+        "resume": "Une filière textile expérimente des panneaux isolants à partir de chutes.",
+        "contenu": "<p>Une entreprise textile de Tacna, accompagnée par la DIREPRO, a lancé un projet pour recycler les chutes de tissus en panneaux isolants pour le bâtiment. Les chutes, autrefois jetées, sont désormais broyées et mélangées à un liant écologique pour former des plaques isolantes thermiques et acoustiques.</p><p>Le procédé permet de valoriser plus de 3 tonnes de déchets textiles par mois. Les panneaux sont testés dans des logements sociaux de la région, améliorant l'efficacité énergétique.</p><p>Ce projet a reçu le soutien du Gouvernement Régional et devrait être reproduit ailleurs.</p>"
+    },
+    "es": {
+        "titre": "Retales de tela en aislantes",
+        "date": "2025-04-02",
+        "categorie": "inorganique",
+        "image": "images/articles/002.jpg",
+        "resume": "Un sector textil experimenta paneles aislantes a partir de retales.",
+        "contenu": "<p>Una empresa textil de Tacna, junto con DIREPRO, ha puesto en marcha un proyecto para reciclar retales de tela y convertirlos en paneles aislantes para la construcción. Los retales, que antes se desechaban, ahora se trituran y se mezclan con un aglutinante ecológico para formar placas aislantes térmicas y acústicas.</p><p>El proceso permite aprovechar más de 3 toneladas de residuos textiles al mes. Los paneles se están probando en viviendas sociales de la región, mejorando la eficiencia energética.</p><p>Este proyecto ha recibido el apoyo del Gobierno Regional y se espera replicarlo en otras zonas.</p>"
+    },
+    "en": {
+        "titre": "Fabric scraps into insulation",
+        "date": "2025-04-02",
+        "categorie": "inorganique",
+        "image": "images/articles/002.jpg",
+        "resume": "A textile sector experiments with insulation panels from scraps.",
+        "contenu": "<p>A textile company in Tacna, together with DIREPRO, has launched a project to recycle fabric scraps into insulation panels for construction. The scraps, previously discarded, are now shredded and mixed with an eco-friendly binder to form thermal and acoustic insulation boards.</p><p>The process recovers over 3 tons of textile waste per month. The panels are being tested in social housing in the region, improving energy efficiency.</p><p>This project has received support from the Regional Government and is expected to be replicated elsewhere.</p>"
+    }
+}

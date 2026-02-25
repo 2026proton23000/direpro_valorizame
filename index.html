@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorizame Tacna · DIREPRO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="container header-flex">
+        <div class="logo">DIREPRO<span> · Tacna</span></div>
+        <nav>
+            <a href="index.html" data-i18n="nav.accueil">Accueil</a>
+            <a href="a-propos.html" data-i18n="nav.projet">Le projet</a>
+            <a href="solutions.html" data-i18n="nav.solutions">Solutions</a>
+            <a href="carte.html" data-i18n="nav.carte">Carte</a>
+            <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="lang-switcher">
+            <a href="?lang=es" class="lang-option" data-lang="es">🇪🇸 ES</a>
+            <a href="?lang=fr" class="lang-option" data-lang="fr">🇫🇷 FR</a>
+            <a href="?lang=en" class="lang-option" data-lang="en">🇬🇧 EN</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- HERO -->
+    <section class="hero reveal">
+        <div class="container">
+            <h1 data-i18n="hero.titre">Valorizame Tacna : l'économie circulaire en action</h1>
+            <p data-i18n="hero.sous_titre">Accompagnement des PMI/PME, valorisation des déchets organiques et inorganiques, et innovation locale.</p>
+            <a href="#" class="btn" data-i18n="hero.bouton">Je suis une entreprise →</a>
+        </div>
+    </section>
+
+    <!-- CHIFFRES -->
+    <section class="chiffres">
+        <div class="container">
+            <div class="chiffres-grid">
+                <div class="chiffre-card reveal">
+                    <div class="chiffre-icone">🏭</div>
+                    <div class="chiffre-nombre">15</div>
+                    <div class="chiffre-label" data-i18n="chiffres.entreprises">entreprises accompagnées</div>
+                </div>
+                <div class="chiffre-card reveal">
+                    <div class="chiffre-icone">🧪</div>
+                    <div class="chiffre-nombre">8</div>
+                    <div class="chiffre-label" data-i18n="chiffres.filieres">filières innovantes</div>
+                </div>
+                <div class="chiffre-card reveal">
+                    <div class="chiffre-icone">⚖️</div>
+                    <div class="chiffre-nombre">12 t</div>
+                    <div class="chiffre-label" data-i18n="chiffres.dechets">déchets valorisés</div>
+                </div>
+                <div class="chiffre-card reveal">
+                    <div class="chiffre-icone">🌟</div>
+                    <div class="chiffre-nombre">3</div>
+                    <div class="chiffre-label" data-i18n="chiffres.projets">projets pilotes</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AXES -->
+    <section class="axes">
+        <div class="container">
+            <h2 class="section-title reveal" data-i18n="axes.titre">Nos deux défis</h2>
+            <div class="axes-grid">
+                <div class="axe-card organique reveal">
+                    <h3 data-i18n="axes.organique.titre">Organique <span>🌱</span></h3>
+                    <p data-i18n="axes.organique.description">Valorisation des déchets de l'agro-industrie : peaux d'oranges, alperujo d'olive, résidus de transformation… Découvrez nos solutions circulaires.</p>
+                    <a href="/solutions.html?filter=organique" class="axe-link" data-i18n="axes.organique.lien">Explorer les projets <span>→</span></a>
+                </div>
+                <div class="axe-card inorganique reveal">
+                    <h3 data-i18n="axes.inorganique.titre">Inorganique <span>⚙️</span></h3>
+                    <p data-i18n="axes.inorganique.description">Déchets de tissus, tournures d'usinage, caoutchouc… Nous accompagnons les PME dans le recyclage et la revalorisation.</p>
+                    <a href="/solutions.html?filter=inorganique" class="axe-link" data-i18n="axes.inorganique.lien">Voir les solutions <span>→</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DERNIÈRES ACTUALITÉS -->
+    <section class="actualites">
+        <div class="container">
+            <h2 class="section-title reveal" data-i18n="actualites.titre">Solutions récentes</h2>
+            <div class="articles-grid" id="articles-list">
+                <!-- Les articles seront injectés par JS -->
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="/solutions.html?lang=es" class="btn" style="background: var(--rojo); color: white;" data-i18n="actualites.tout_voir">Toutes les solutions</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- DERNIÈRES SOLUTIONS -->
+    <section class="actualites">
+        <div class="container">
+            <h2 class="section-title reveal" data-i18n="actualites.titre">Solutions récentes</h2>
+            <div class="articles-grid" id="articles-list">
+                <!-- injecté par JS -->
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="solutions.html" class="btn" style="background: var(--rojo); color: white;" data-i18n="actualites.tout_voir">Toutes les solutions</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- HALL OF FAME (placeholder) -->
+    <section class="hall-of-fame">
+        <div class="container">
+            <h2 class="section-title reveal" data-i18n="fame.titre">Entreprises pionnières</h2>
+            <div class="fame-grid" id="fame-list">
+                <!-- sera chargé plus tard -->
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="carte.html" style="color: var(--rojo); font-weight: 600;" data-i18n="fame.tout_voir">Voir toutes les entreprises →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-final">
+        <div class="container">
+            <h2 data-i18n="cta.titre">Vous êtes une entreprise ?</h2>
+            <p style="font-size: 1.4rem; max-width: 700px; margin: 0 auto;" data-i18n="cta.sous_titre">Recevez une visite de nos experts et construisons ensemble une solution adaptée à vos déchets.</p>
+            <a href="#" class="btn" data-i18n="cta.bouton">Demander une visite gratuite</a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2025 DIREPRO Tacna · Gobierno Regional de Tacna · Projet Valorizame</p>
+        <p><a href="#" data-i18n="footer.mentions">Mentions légales</a> · <a href="#" data-i18n="footer.donnees">Accès aux données</a></p>
+    </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/articles.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

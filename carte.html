@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte · Valorizame Tacna</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+            border-radius: 20px;
+            margin: 2rem 0;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            z-index: 1;
+        }
+        .leaflet-popup-content {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.9rem;
+        }
+        .leaflet-popup-content b {
+            color: var(--rojo);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-flex">
+            <div class="logo">DIREPRO<span> · Tacna</span></div>
+            <nav>
+                <a href="index.html" data-i18n="nav.accueil">Accueil</a>
+                <a href="a-propos.html" data-i18n="nav.projet">Le projet</a>
+                <a href="solutions.html" data-i18n="nav.solutions">Solutions</a>
+                <a href="carte.html" data-i18n="nav.carte">Carte</a>
+                <a href="contact.html" data-i18n="nav.contact">Contact</a>
+            </nav>
+            <div class="lang-switcher">
+                <a href="?lang=es" class="lang-option" data-lang="es">🇪🇸 ES</a>
+                <a href="?lang=fr" class="lang-option" data-lang="fr">🇫🇷 FR</a>
+                <a href="?lang=en" class="lang-option" data-lang="en">🇬🇧 EN</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header" style="background: linear-gradient(145deg, var(--rojo) 0%, var(--morado) 100%);">
+            <div class="container">
+                <h1 data-i18n="carte.titre">Entreprises participantes</h1>
+                <p data-i18n="carte.sous_titre">Découvrez les entreprises qui innovent avec nous</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <div id="map"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 DIREPRO Tacna · Gobierno Regional de Tacna · Projet Valorizame</p>
+            <p><a href="#" data-i18n="footer.mentions">Mentions légales</a> · <a href="#" data-i18n="footer.donnees">Accès aux données</a></p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/carte.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
