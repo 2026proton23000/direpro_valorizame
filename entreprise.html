@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entreprises · Valorizame Tacna</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header {
+            background: linear-gradient(145deg, var(--rojo) 0%, var(--morado) 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .section {
+            padding: 4rem 0;
+        }
+        .section.bg-light {
+            background-color: var(--gris-pale);
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .benefit-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border-left: 6px solid var(--amarillo);
+        }
+        .benefit-card h3 {
+            color: var(--rojo);
+            margin-bottom: 1rem;
+        }
+        .step-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: var(--rojo);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        .testimonial {
+            background: white;
+            padding: 2rem;
+            border-radius: 30px;
+            box-shadow: 0 20px 30px -10px rgba(197,40,40,0.1);
+            margin: 2rem 0;
+            font-style: italic;
+        }
+        .testimonial-author {
+            margin-top: 1rem;
+            font-weight: 600;
+            color: var(--morado);
+        }
+
+        /* Style moderne pour le formulaire (copié depuis contact.html) */
+        .form-container {
+            background: white;
+            border-radius: 30px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px -10px rgba(197,40,40,0.2);
+            margin: 3rem 0;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: var(--morado);
+            margin-bottom: 0.5rem;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem 1.2rem;
+            border: 2px solid var(--gris-moyen);
+            border-radius: 60px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+        .form-group textarea {
+            border-radius: 30px;
+            resize: vertical;
+            min-height: 120px;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--rojo);
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .btn-submit {
+            background: var(--rojo);
+            color: white;
+            border: none;
+            padding: 1rem 2.8rem;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+        }
+        .btn-submit:hover {
+            background: var(--morado);
+            transform: scale(1.02);
+        }
+        .btn-large {
+            padding: 1.2rem 3rem;
+            font-size: 1.3rem;
+        }
+        .form-message {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 30px;
+            display: none;
+        }
+        .form-message.success {
+            background: #d4edda;
+            color: #155724;
+            display: block;
+        }
+        .form-message.error {
+            background: #f8d7da;
+            color: #721c24;
+            display: block;
+        }
+
+        /* Pour l'image : éviter la déformation et assurer un bon ratio */
+        .intro-image {
+            width: 100%;
+            border-radius: 30px;
+            box-shadow: 0 20px 30px -10px rgba(0,0,0,0.2);
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header identique -->
+    <header>
+        <div class="container header-flex">
+            <div class="logo">DIREPRO<span> · Tacna</span></div>
+            <nav>
+                <a href="index.html" data-i18n="nav.accueil">Accueil</a>
+                <a href="a-propos.html" data-i18n="nav.projet">Le projet</a>
+                <a href="solutions.html" data-i18n="nav.solutions">Solutions</a>
+                <a href="voz-tacna.html" data-i18n="nav.voz">La Voz</a>
+                <a href="carte.html" data-i18n="nav.carte">Carte</a>
+                <a href="contact.html" data-i18n="nav.contact">Contact</a>
+            </nav>
+            <div class="lang-switcher">
+                <a href="?lang=es" class="lang-option" data-lang="es">🇪🇸 ES</a>
+                <a href="?lang=fr" class="lang-option" data-lang="fr">🇫🇷 FR</a>
+                <a href="?lang=en" class="lang-option" data-lang="en">🇬🇧 EN</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section d'en-tête -->
+        <section class="page-header">
+            <div class="container">
+                <h1 data-i18n="entreprise.titre">Vous êtes une entreprise ?</h1>
+                <p data-i18n="entreprise.sous_titre">Transformez vos déchets en opportunités avec l'aide de la DIREPRO</p>
+            </div>
+        </section>
+
+        <!-- Introduction avec image redimensionnée -->
+        <section class="section">
+            <div class="container">
+                <div class="grid-2">
+                    <div>
+                        <h2 class="section-title" style="text-align: left;" data-i18n="entreprise.intro_titre">Le programme Valorizame</h2>
+                        <p data-i18n="entreprise.intro_texte">Le gouvernement régional de Tacna, à travers la DIREPRO, accompagne les PMI/PME dans la valorisation de leurs déchets organiques et inorganiques. Notre objectif : transformer les contraintes environnementales en leviers économiques.</p>
+                        <p>🌱 15 entreprises déjà accompagnées · ♻️ 12 tonnes de déchets valorisés · 💡 8 filières innovantes</p>
+                    </div>
+                    <div>
+                        <img src="images/entreprise.jpg" alt="Atelier" class="intro-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Avantages -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title" data-i18n="entreprise.avantages_titre">Pourquoi participer ?</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <h3>💼 <span data-i18n="entreprise.avantage1_titre">Accompagnement gratuit</span></h3>
+                        <p data-i18n="entreprise.avantage1_texte">Des experts DIREPRO se déplacent dans votre entreprise pour analyser vos flux de déchets et proposer des solutions concrètes.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>📈 <span data-i18n="entreprise.avantage2_titre">Nouvelles filières</span></h3>
+                        <p data-i18n="entreprise.avantage2_texte">Accédez à des réseaux de valorisation innovants (biocarburant, compost, recyclage textile) et créez de nouvelles sources de revenus.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>🏅 <span data-i18n="entreprise.avantage3_titre">Visibilité</span></h3>
+                        <p data-i18n="entreprise.avantage3_texte">Votre entreprise apparaîtra sur notre carte interactive et dans nos communications, valorisant votre engagement environnemental.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comment ça marche -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="entreprise.comment_titre">Comment ça marche ?</h2>
+                <div style="max-width:800px; margin:0 auto;">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3 data-i18n="entreprise.step1_titre">Vous nous contactez</h3>
+                        <p data-i18n="entreprise.step1_texte">Remplissez le formulaire ci-dessous ou appelez-nous. Nous vous répondrons sous 48h.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3 data-i18n="entreprise.step2_titre">Diagnostic gratuit</h3>
+                        <p data-i18n="entreprise.step2_texte">Un technicien DIREPRO se rend dans votre entreprise pour évaluer vos déchets et identifier les opportunités de valorisation.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3 data-i18n="entreprise.step3_titre">Plan d'action</h3>
+                        <p data-i18n="entreprise.step3_texte">Ensemble, nous définissons les solutions adaptées (équipements, partenaires, financements) et vous accompagnons dans leur mise en œuvre.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulaire modernisé -->
+        <section class="section">
+            <div class="container">
+                <div class="form-container">
+                    <h2 class="section-title" style="margin-top:0;" data-i18n="entreprise.form_titre">Demandez votre visite gratuite</h2>
+                    <form id="entreprise-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name" data-i18n="entreprise.form_nom">Nom / Entreprise</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" data-i18n="entreprise.form_email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" data-i18n="entreprise.form_telephone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="waste_type" data-i18n="entreprise.form_type">Type de déchets</label>
+                            <select id="waste_type" name="waste_type">
+                                <option value="organique" data-i18n="entreprise.organique">Organique</option>
+                                <option value="inorganique" data-i18n="entreprise.inorganique">Inorganique</option>
+                                <option value="both" data-i18n="entreprise.both">Les deux</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-i18n="entreprise.form_message">Message (facultatif)</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit btn-large" data-i18n="entreprise.form_envoyer">Demander une visite</button>
+                        <div id="entreprise-form-message" class="form-message"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 DIREPRO Tacna · Gobierno Regional de Tacna · Projet Valorizame</p>
+            <p><a href="#" data-i18n="footer.mentions">Mentions légales</a> · <a href="#" data-i18n="footer.donnees">Accès aux données</a></p>
+        </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/telegram-contact.js"></script>
+    <script src="js/entreprise.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

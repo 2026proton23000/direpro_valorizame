@@ -3,22 +3,340 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>À propos · Valorizame Tacna</title>
+    <title>Contact · DIREPRO Tacna</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        .page-header {
+            background: linear-gradient(145deg, var(--rojo) 0%, var(--morado) 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .contact-card {
+            background: white;
+            border-radius: 30px;
+            padding: 2rem;
+            box-shadow: 0 20px 30px -10px rgba(197,40,40,0.1);
+            border-left: 6px solid var(--rojo);
+        }
+        .contact-card h3 {
+            color: var(--morado);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .contact-card p {
+            margin: 0.5rem 0;
+            color: #2a2a3a;
+        }
+        .contact-icon {
+            font-size: 2rem;
+        }
+        .map-container {
+            margin: 3rem 0;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 20px 30px -10px rgba(0,0,0,0.2);
+            height: 400px;
+        }
+        #contact-map {
+            height: 100%;
+            width: 100%;
+        }
+        .emergency-numbers {
+            background: var(--gris-pale);
+            border-radius: 30px;
+            padding: 2rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+        .emergency-numbers h2 {
+            color: var(--rojo);
+            margin-bottom: 1rem;
+        }
+        .numbers-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .number-item {
+            background: white;
+            padding: 1rem 2rem;
+            border-radius: 60px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+            font-weight: 600;
+            color: var(--morado);
+        }
+        .form-container {
+            background: white;
+            border-radius: 30px;
+            padding: 2rem;
+            box-shadow: 0 20px 30px -10px rgba(197,40,40,0.1);
+            margin: 3rem 0;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: var(--morado);
+            margin-bottom: 0.5rem;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem 1.2rem;
+            border: 2px solid var(--gris-moyen);
+            border-radius: 60px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+        .form-group textarea {
+            border-radius: 30px;
+            resize: vertical;
+            min-height: 120px;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--rojo);
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .btn-submit {
+            background: var(--rojo);
+            color: white;
+            border: none;
+            padding: 1rem 2.8rem;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-submit:hover {
+            background: var(--morado);
+            transform: scale(1.02);
+        }
+        .form-message {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 30px;
+            display: none;
+        }
+        .form-message.success {
+            background: #d4edda;
+            color: #155724;
+            display: block;
+        }
+        .form-message.error {
+            background: #f8d7da;
+            color: #721c24;
+            display: block;
+        }
+        .other-offices {
+            margin: 4rem 0;
+        }
+        .other-offices .section-title {
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+        .other-offices-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .office-item {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--amarillo);
+        }
+        .office-item h4 {
+            color: var(--rojo);
+            margin-bottom: 0.5rem;
+        }
+        .office-item p {
+            font-size: 0.9rem;
+            color: #4a4a5a;
+            margin: 0.3rem 0;
+        }
+    </style>
 </head>
 <body>
-<header>...</header>
-<main>
-    <div class="container" style="padding: 4rem 0;">
-        <h1>À propos de DIREPRO Tacna</h1>
-        <p>Contenu à venir...</p>
-    </div>
-</main>
-<footer>...</footer>
-<script src="js/i18n.js"></script>
-<script src="js/app.js"></script>
+    <header>
+        <div class="container header-flex">
+            <div class="logo">DIREPRO<span> · Tacna</span></div>
+            <nav>
+                <a href="index.html" data-i18n="nav.accueil">Accueil</a>
+                <a href="a-propos.html" data-i18n="nav.projet">Le projet</a>
+                <a href="solutions.html" data-i18n="nav.solutions">Solutions</a>
+                <a href="voz-tacna.html" data-i18n="nav.voz">La Voz</a>
+                <a href="carte.html" data-i18n="nav.carte">Carte</a>
+                <a href="contact.html" data-i18n="nav.contact">Contact</a>
+            </nav>
+            <div class="lang-switcher">
+                <a href="?lang=es" class="lang-option" data-lang="es">🇪🇸 ES</a>
+                <a href="?lang=fr" class="lang-option" data-lang="fr">🇫🇷 FR</a>
+                <a href="?lang=en" class="lang-option" data-lang="en">🇬🇧 EN</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 data-i18n="contact.titre">Contactez-nous</h1>
+                <p data-i18n="contact.sous_titre">Votre gouvernement régional à votre écoute</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Cartes de contact principales -->
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3><span class="contact-icon">📍</span> <span data-i18n="contact.siege">Siège DIREPRO</span></h3>
+                    <p>Av. Manuel A. Odría N° 1245</p>
+                    <p>Villa Panamericana, Tacna</p>
+                    <p>Pérou</p>
+                </div>
+                <div class="contact-card">
+                    <h3><span class="contact-icon">📞</span> <span data-i18n="contact.telephone">Téléphone</span></h3>
+                    <p data-i18n="contact.central">Central téléphonique</p>
+                    <p><strong>+51 52 600826</strong></p>
+                    <p data-i18n="contact.horaire">Lun-Ven 8:00 – 15:30</p>
+                </div>
+                <div class="contact-card">
+                    <h3><span class="contact-icon">✉️</span> <span data-i18n="contact.email">Email</span></h3>
+                    <p>direpro@regiontacna.gob.pe</p>
+                    <p>mesadepartes@regiontacna.gob.pe</p>
+                </div>
+            </div>
+
+            <!-- Carte Leaflet -->
+            <div class="map-container">
+                <div id="contact-map"></div>
+            </div>
+
+            <!-- Numéros d'urgence avec traductions -->
+            <div class="emergency-numbers">
+                <h2 data-i18n="contact.urgence_titre">Numéros d'urgence</h2>
+                <div class="numbers-grid">
+                    <div class="number-item" data-i18n="contact.urgence_samu">🚑 SAMU: 106</div>
+                    <div class="number-item" data-i18n="contact.urgence_pompiers">🔥 Pompiers: 116</div>
+                    <div class="number-item" data-i18n="contact.urgence_police">👮 Police nationale: 105</div>
+                    <div class="number-item" data-i18n="contact.urgence_garde">🌊 Garde côtière: 112</div>
+                    <div class="number-item" data-i18n="contact.urgence_medicale">⚕️ Alerte médicale: 107</div>
+                </div>
+            </div>
+
+            <!-- Formulaire de contact (envoi via Telegram) -->
+            <div class="form-container">
+                <h2 class="section-title" data-i18n="contact.form_titre">Écrivez-nous</h2>
+                <form id="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name" data-i18n="contact.form_nom">Nom</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-i18n="contact.form_email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" data-i18n="contact.form_sujet">Sujet</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" data-i18n="contact.form_message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit" data-i18n="contact.form_envoyer">Envoyer</button>
+                    <div id="form-message" class="form-message"></div>
+                </form>
+            </div>
+
+            <!-- Liste des directions régionales -->
+            <div class="other-offices">
+                <h2 class="section-title" data-i18n="contact.directions_titre">Autres directions régionales</h2>
+                <div class="other-offices-grid">
+                    <div class="office-item">
+                        <h4>Agricultura</h4>
+                        <p>Av. Manuel A. Odría N° 1245</p>
+                        <p>+51 52 600827</p>
+                    </div>
+                    <div class="office-item">
+                        <h4>Comercio Exterior</h4>
+                        <p>Av. Jorge Basadre S/N</p>
+                        <p>+51 52 600828</p>
+                    </div>
+                    <div class="office-item">
+                        <h4>Educación</h4>
+                        <p>Calle Zela 504</p>
+                        <p>+51 52 600829</p>
+                    </div>
+                    <div class="office-item">
+                        <h4>Energía y Minas</h4>
+                        <p>Av. Bolognesi 1250</p>
+                        <p>+51 52 600830</p>
+                    </div>
+                    <div class="office-item">
+                        <h4>Salud</h4>
+                        <p>Av. Coronel Mendoza 1500</p>
+                        <p>+51 52 600831</p>
+                    </div>
+                    <div class="office-item">
+                        <h4>Transportes</h4>
+                        <p>Av. Industrial 300</p>
+                        <p>+51 52 600832</p>
+                    </div>
+                    <div class="office-item">
+                        <h4>Vivienda</h4>
+                        <p>Jr. San Martín 450</p>
+                        <p>+51 52 600833</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 DIREPRO Tacna · Gobierno Regional de Tacna · Projet Valorizame</p>
+            <p><a href="#" data-i18n="footer.mentions">Mentions légales</a> · <a href="#" data-i18n="footer.donnees">Accès aux données</a></p>
+        </div>
+    </footer>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/telegram-contact.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

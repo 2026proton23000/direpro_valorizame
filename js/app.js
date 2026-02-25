@@ -5,6 +5,11 @@ const app = {
         if (typeof articles !== 'undefined' && articles.init) articles.init();
         if (typeof carte !== 'undefined' && carte.init) carte.init();
         if (typeof articlePage !== 'undefined' && articlePage.init) articlePage.init();
+        if (typeof voz !== 'undefined' && voz.init) voz.init();
+        if (typeof vozArticle !== 'undefined' && vozArticle.init) vozArticle.init();
+        if (typeof contact !== 'undefined' && contact.init) contact.init();
+        if (typeof entreprise !== 'undefined' && entreprise.init) entreprise.init();
+
     },
 
     setupRevealOnScroll: function() {
